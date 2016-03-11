@@ -4,8 +4,8 @@ var port = 5050;
 var express = require('express');
 
 var app = express();
-app.use(express.static(__dirname + "/public"));
-
+var cors = require('cors')
+app.use(cors());
 var query = require('./query.js');
 
 app.get("/dota_database/getalldata",function(request , response){
